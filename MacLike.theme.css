@@ -1,0 +1,35 @@
+/**
+ * @name MacLike
+ * @version 1.0.0
+ * @description A theme borrowing MacOS design language. Part of the WAM project.
+ * @author syrys
+ */
+
+@import url(https://raw.githubusercontent.com/syryz/MacLike-Discord/refs/heads/main/src/sidebar.css);
+@import url(https://raw.githubusercontent.com/syryz/MacLike-Discord/refs/heads/main/src/window-buttons.css);
+@import url(https://raw.githubusercontent.com/syryz/MacLike-Discord/refs/heads/main/src/tweaks.css);
+
+/* Safari-like Header/Address Bar !!EXPERIMENTAL!! */
+/* Comment out if unwanted */
+@import url(https://raw.githubusercontent.com/syryz/MacLike-Discord/refs/heads/main/src/header.css);
+/* Apple Emojis */
+@import url(https://mwittrien.github.io/BetterDiscordAddons/Themes/EmojiReplace/base/Apple.css);
+
+/* MAIN SETTINGS */
+:root {
+  --main-app-bg_light: rgba(238, 238, 238, 0.7);
+  --main-app-bg_dark: rgba(36, 36, 36, 0.7);
+
+  --window-button-size: 13px;
+
+  --window-button-min: url("data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIxNiIgaGVpZ2h0PSIxNiIgeG1sbnM6dj0iaHR0cHM6Ly92ZWN0YS5pby9uYW5vIj48cmVjdCByeT0iMCIgaGVpZ2h0PSIxNiIgd2lkdGg9IjE2IiBvcGFjaXR5PSIwIiBwYWludC1vcmRlcj0ibWFya2VycyBzdHJva2UgZmlsbCIvPjxyZWN0IHdpZHRoPSI4IiBoZWlnaHQ9IjIiIHg9IjQiIHk9IjYuOTk4IiByeT0iMSIgb3BhY2l0eT0iLjUiLz48L3N2Zz4=");
+  --window-button-max: url("data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIxNiIgaGVpZ2h0PSIxNiIgeG1sbnM6dj0iaHR0cHM6Ly92ZWN0YS5pby9uYW5vIj48cmVjdCB3aWR0aD0iMTYiIGhlaWdodD0iMTYiIHJ5PSIwIiBvcGFjaXR5PSIwIiBwYWludC1vcmRlcj0ibWFya2VycyBzdHJva2UgZmlsbCIvPjxwYXRoIGQ9Ik02LjQxNCA1TDExIDkuNTg2VjZjMC0uNDE1LS41ODQtMS0xLTF6TTUgNi40MTRWMTBjMCAuNDE1LjU4NSAxIDEgMWgzLjU4NnoiIG9wYWNpdHk9Ii41Ii8+PC9zdmc+");
+  --window-button-restore: url("data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIxNiIgaGVpZ2h0PSIxNiIgeG1sbnM6dj0iaHR0cHM6Ly92ZWN0YS5pby9uYW5vIj48cmVjdCB3aWR0aD0iMTYiIGhlaWdodD0iMTYiIHJ5PSIwIiBvcGFjaXR5PSIwIiBwYWludC1vcmRlcj0ibWFya2VycyBzdHJva2UgZmlsbCIvPjxwYXRoIGQ9Ik03Ljk5OSAzLjQwOXYzLjU4NmMwIC40MTYuNTg0IDEgMSAxaDMuNTg2ek04IDEyLjU5VjkuMDA0YzAtLjQxNi0uNTg0LTEtMS0xSDMuNDE0eiIgb3BhY2l0eT0iLjUiLz48L3N2Zz4=");
+  --window-button-close: url("data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIxNiIgaGVpZ2h0PSIxNiIgeG1sbnM6dj0iaHR0cHM6Ly92ZWN0YS5pby9uYW5vIj48cmVjdCByeT0iMCIgaGVpZ2h0PSIxNiIgd2lkdGg9IjE2IiBvcGFjaXR5PSIwIiBwYWludC1vcmRlcj0ibWFya2VycyBzdHJva2UgZmlsbCIvPjxwYXRoIGQ9Ik01LjE3MiA1LjE3MmExIDEgMCAwIDAgMCAxLjQxNEw2LjU4NiA4IDUuMTcyIDkuNDE0YTEgMSAwIDAgMCAxLjQxNCAxLjQxNEw4IDkuNDE0bDEuNDE0IDEuNDE0YTEgMSAwIDAgMCAxLjQxNC0xLjQxNEw5LjQxNCA4bDEuNDE0LTEuNDE0YTEgMSAwIDAgMC0xLjQxNC0xLjQxNEw4IDYuNTg2IDYuNTg2IDUuMTcyYTEgMSAwIDAgMC0xLjQxNCAweiIgb3BhY2l0eT0iLjUiLz48L3N2Zz4=");
+
+  --enable-window-border: 1; /* to turn off, set to 0 */
+
+  --glass-opacity: 80%;
+  --glass-blur-strength: 50px;
+  --glass-blur-saturation: 120%;
+}
