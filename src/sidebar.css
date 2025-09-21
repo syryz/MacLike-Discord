@@ -39,8 +39,15 @@ div[class*="sidebarList"] {
   backdrop-filter: none !important;
   translate: 0 calc(var(--custom-app-top-bar-height) * -1) !important;
   max-height: calc(100vh - var(--custom-channel-textarea-text-area-height));
-  & > [class^="container"] {
+  > [class^="container"] {
     padding: 0 !important;
+    background: transparent !important;
+  }
+  > [class^="privateChannels"] {
+    background: transparent !important;
+    > [class^="scroller"] {
+      background: transparent !important;
+    }
   }
   & div[class^="scroller"] {
     margin-bottom: 0 !important;
@@ -57,6 +64,9 @@ div[class^="sidebar_"] {
     bottom: 0 !important;
     border: none !important;
   }
+  & [class^="itemsContainer"] {
+    background: transparent !important;
+  }
   & > nav {
     margin-bottom: var(--custom-channel-textarea-text-area-height) !important;
   }
@@ -64,4 +74,7 @@ div[class^="sidebar_"] {
 div[class*="sidebarResizeHandle"] {
   translate: 0 calc(var(--custom-app-top-bar-height) * -1) !important;
   height: 100vh !important;
+}
+div[class^="app"] > div[class^="bg"] {
+  background: transparent !important;
 }
