@@ -1,0 +1,41 @@
+#app-mount:has(div[class^="subtitleContainer"]) {
+  div[class^="subtitleContainer"] {
+    position: absolute !important;
+    width: 100% !important;
+    > [aria-label="Channel header"] {
+      height: auto !important;
+      padding-top: calc(var(--custom-app-top-bar-height) + var(--space-8));
+      /* background: color-mix(in oklab, var(--background-gradient-lower,var(--__header-bar-background)) 100%, transparent); */
+      background: transparent;
+      backdrop-filter: blur(var(--glass-blur-strength)) saturate(var(--glass-blur-saturation));
+      &::before {
+        content: "";
+        position: absolute;
+        height: 100vh;
+        width: 100vw;
+        bottom: 0;
+        left: 0;
+        background: var(--background-gradient-lower,var(--__header-bar-background));
+        opacity: 1;
+      }
+      div[class^="children"]::after {
+        display: none;
+      }
+    }
+  }
+  div[class^="page"] {
+    height: calc(100% + var(--custom-app-top-bar-height)) !important;
+    translate: 0 calc(var(--custom-app-top-bar-height) * -1) !important;
+    div[class^="messagesWrapper"] > div[class^="scroller"] {
+      &::-webkit-scrollbar-track {
+      margin-top: calc(var(--custom-app-top-bar-height) * 3);
+      }
+      [class^="scrollerInner"] > [class^="container"] {
+        margin-top: calc(var(--custom-app-top-bar-height) * 3);
+      }
+    }
+  }
+}
+html.app-focused div[class^="subtitleContainer"] > [aria-label="Channel header"]::before {
+  opacity: var(--glass-opacity) !important;
+}
