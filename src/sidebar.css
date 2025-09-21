@@ -1,0 +1,67 @@
+html.theme-dark, html.theme-ash, html.theme-onyx {
+  color-scheme: dark !important;
+  &::before {
+    pointer-events: none;
+    opacity: var(--window-border);
+    border-radius: 8px;
+    content: "";
+    position: fixed;
+    height: 100dvh;
+    width: 100dvw;
+    z-index: 100000;
+    box-shadow: inset 0 0 0 2px #ffffff30, inset 0 4px 0px -2px #ffffff30;
+  }
+}
+html.theme-light {
+  color-scheme: light !important;
+}
+html.platform-win {
+  background-color: light-dark(var(--main-app-bg_light), var(--main-app-bg_dark));
+}
+* {
+  --background-base-lowest: transparent !important;
+}
+
+div[class^="sidebarRegion"], div[class*=SidebarView], div[data-layer="USER_SETTINGS"] {
+  background: transparent !important;
+}
+div[class^="page"]::before {
+  content: "";
+  width: 100%;
+  height: 100%;
+  position: fixed;
+  top: 0;
+  z-index: -10000;
+  background: var(--background-base-low);
+}
+div[class*="sidebarList"] {
+  border: none !important;
+  backdrop-filter: none !important;
+  translate: 0 calc(var(--custom-app-top-bar-height) * -1) !important;
+  max-height: calc(100vh - var(--custom-channel-textarea-text-area-height));
+  & > [class^="container"] {
+    padding: 0 !important;
+  }
+  & div[class^="scroller"] {
+    margin-bottom: 0 !important;
+    padding-bottom: 0 !important;
+  }
+  & div[class^="searchBar"] {
+    border-bottom: none !important;
+  }
+}
+div[class^="sidebar_"] {
+  overflow: visible !important;
+  & [class^="panels"] {
+    background: transparent !important;
+    bottom: 0 !important;
+    border: none !important;
+  }
+  & > nav {
+    margin-bottom: var(--custom-channel-textarea-text-area-height) !important;
+  }
+}
+div[class*="sidebarResizeHandle"] {
+  translate: 0 calc(var(--custom-app-top-bar-height) * -1) !important;
+  height: 100vh !important;
+}
