@@ -1,0 +1,93 @@
+div[class^="bar"] {
+  z-index: 10000;
+  > [class^="trailing"] {
+    margin-right: 10px;
+  }
+  > [class^="title"] {
+    translate: calc((var(--custom-guild-sidebar-width) + var(--custom-guild-list-width)) / 3) 0;
+  }
+}
+div[class^="winButtons"] {
+  app-region: no-drag;
+  z-index: 10000 !important;
+  order: -1 !important;
+  position: fixed !important;
+  left: 10px;
+  top: 14px;
+  cursor: pointer !important;
+  &::before {
+    display: none !important;
+  }
+  &:hover > *::after {
+    opacity: 1 !important;
+  }
+}
+
+div[class*="winButton_"] {
+  cursor: pointer !important;
+  padding: 0px !important;
+  height: var(--window-button-size) !important;
+  width: var(--window-button-size) !important;
+  align-self: center;
+  margin-right: 4px !important;
+  border-radius: 50px;
+  box-shadow: inset 0 0 0px 1px light-dark(#00000010, #00000000) !important;
+  background-color: light-dark(#c1c1c170, #5d5d5d70) !important;
+  content: none !important;
+  &[aria-label="Close"] {
+    order: -1 !important;
+  }
+  &::after  {
+    content: "" !important;
+    position: absolute !important;
+    translate: -2px -2px !important;
+    width: 12px !important;
+    height: 12px !important;
+    opacity: 0 !important;
+    scale: 1.1 !important;
+  }
+  & > svg {
+    display: none !important;
+  }
+}
+div[class^="winButtons"]:hover, html.app-focused {
+  div[class^="winButton"][aria-label="Minimize"] {
+    background-color: #febc2e !important;
+    &:active {
+      background-color: #b19021 !important;
+    }
+  }
+
+  div[class^="winButton"][aria-label="Maximize"], div[class^="winButton"][aria-label="Restore"] {
+    background-color: #28c840 !important;
+    &:active {
+      background-color: #2d903e !important;
+    }
+  }
+
+  div[class^="winButton"][aria-label="Close"] {
+    background-color: #ff5f57 !important;
+    &:active {
+      background-color: #a24646 !important;
+    }
+  }
+}
+
+div[class^="winButton"][aria-label="Close"]::after {
+  background-image: var(--window-button-close);
+  transform: translate(0px, -0.5px);
+}
+
+div[class^="winButton"][aria-label="Minimize"]::after {
+  background-image: var(--window-button-min);
+}
+
+div[class^="winButton"][aria-label="Maximize"]::after {
+  background-image: var(--window-button-max);
+  transform: translate(0px, -0.5px);
+}
+
+div[class^="winButton"][aria-label="Restore"]::after {
+  background-image: var(--window-button-restore);
+  transform: translate(0px, -0.5px);
+}
