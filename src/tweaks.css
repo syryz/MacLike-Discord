@@ -1,0 +1,32 @@
+div[class^="scrim"] {
+  --scrim-default: transparent;
+  pointer-events: none;
+}
+div[data-layer="USER_SETTINGS"] {
+  div[class^="searchBar"] div[class^="wrapper"] {
+    border: none !important;
+    &:not([data-read-only=true]):has(input:focus,textarea:focus) {
+      outline: 2px solid color-mix(in oklab, var(--custom-input-border-color) 50%, transparent) !important;
+    }
+  }
+  div[class^="contentRegionScroller"] {
+    margin-top: 0 !important;
+    & div[class^="contentColumn"] {
+      width: calc(100vw - var(--custom-guild-sidebar-width)) !important;
+    }
+    & div[class^="toolsContainer"] {
+      position: fixed !important;
+      right: 0px !important;
+      padding-top: 30px !important;
+      & div[aria-label="Close"] {
+        border: none;
+        box-shadow: 0 0 15px rgba(0, 0, 0, 0.1), 0 0 0 1px rgba(0, 0, 0, 0.05), 0 0 0 1px light-dark(rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.5)), inset 0 0 0 1.5px rgba(255, 255, 255, 0.15);
+        background-color: light-dark(#ffffff80, #28282880) !important;
+        backdrop-filter: saturate(1.5) blur(20px);
+      }
+      & div[class^="keybind"] {
+        display: none !important;
+      }
+    }
+  }
+}
