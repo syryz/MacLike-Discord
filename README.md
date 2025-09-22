@@ -12,11 +12,9 @@ A clean, minimalist Discord theme aiming to create a more native, macOS-like exp
 ## Features
 
 * **Native Window Controls**: macOS-style "traffic light" window controls (close, minimize, maximize).
-* **System Font**: Utilizes the default system font stack, defaulting to "San Francisco".
 * **Translucency**: Incorporates a subtle background blur (mica/acrylic effect) on various UI elements for depth.
-* **System Colors**: Adopts a color palette that mirrors native macOS applications.
-* **Rounded Corners**: Consistent use of corner radii on modals, pop-ups, and interface elements.
-* **Minimalist Icons**: Replaces default icons with SF Symbols-inspired glyphs where possible.
+* **Mac-style Sidebar**: Replicates a native macOS app look
+* **Rounded Corners**: Consistent use of corner radii
 
 ---
 ## Installation
