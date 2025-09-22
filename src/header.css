@@ -28,10 +28,18 @@
     translate: 0 calc(var(--custom-app-top-bar-height) * -1) !important;
     div[class^="messagesWrapper"] > div[class^="scroller"] {
       &::-webkit-scrollbar-track {
-      margin-top: calc(var(--custom-app-top-bar-height) * 3);
+        margin-top: calc(var(--custom-app-top-bar-height) * 3);
       }
       [class^="scrollerInner"] > [class^="container"] {
         margin-top: calc(var(--custom-app-top-bar-height) * 3);
+      }
+    }
+    [class^="membersWrap"] {
+      > ::-webkit-scrollbar-track {
+        margin-top: calc(var(--custom-app-top-bar-height) * 3);
+      }
+      div[aria-label="Members"] {
+        padding-top: calc(var(--custom-app-top-bar-height) * 3);
       }
     }
   }
