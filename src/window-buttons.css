@@ -91,3 +91,7 @@ div[class^="winButton"][aria-label="Restore"]::after {
   background-image: var(--window-button-restore);
   transform: translate(0px, -0.5px);
 }
+
+div[class^="sidebar_"] [class^="itemsContainer"] {
+  margin-top: 6px !important;
+}
