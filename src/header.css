@@ -39,7 +39,7 @@
       > ::-webkit-scrollbar-track {
         margin-top: calc(var(--custom-channel-header-height) + var(--custom-app-top-bar-height));
       }
-      div[aria-label="Members"] {
+      [aria-label="Members"] {
         padding-top: calc(var(--custom-channel-header-height) + var(--custom-app-top-bar-height));
       }
     }
