@@ -16,34 +16,49 @@
         bottom: 0;
         left: 0;
         background: var(--background-gradient-lower,var(--__header-bar-background));
-        opacity: 1;
+        opacity: var(--glass-opacity);
       }
       div[class^="children"]::after {
         display: none;
       }
     }
   }
-  div[class^="page"] {
+  div[class^="page_"] {
+    overflow: hidden;
     height: calc(100% + var(--custom-app-top-bar-height)) !important;
     translate: 0 calc(var(--custom-app-top-bar-height) * -1) !important;
     div[class^="messagesWrapper"] > div[class^="scroller"] {
       &::-webkit-scrollbar-track {
-        margin-top: calc(var(--custom-app-top-bar-height) * 3);
+        margin-top: calc(var(--custom-channel-header-height) + var(--custom-app-top-bar-height));
       }
       [class^="scrollerInner"] > [class^="container"] {
-        margin-top: calc(var(--custom-app-top-bar-height) * 3);
+        margin-top: calc(var(--custom-channel-header-height) + var(--custom-app-top-bar-height));
       }
     }
     [class^="membersWrap"] {
       > ::-webkit-scrollbar-track {
-        margin-top: calc(var(--custom-app-top-bar-height) * 3);
+        margin-top: calc(var(--custom-channel-header-height) + var(--custom-app-top-bar-height));
       }
       div[aria-label="Members"] {
-        padding-top: calc(var(--custom-app-top-bar-height) * 3);
+        padding-top: calc(var(--custom-channel-header-height) + var(--custom-app-top-bar-height));
       }
     }
   }
 }
-html.app-focused div[class^="subtitleContainer"] > [aria-label="Channel header"]::before {
-  opacity: var(--glass-opacity) !important;
+
+[class^="searchResultsWrap"] {
+  height: 100vh;
+  > ::-webkit-scrollbar-track {
+    margin-top: calc(2 * (var(--custom-channel-header-height) + var(--custom-app-top-bar-height)));
+  }
+  > [class^="searchHeader"] {
+    margin-top: calc(var(--custom-channel-header-height) + var(--custom-app-top-bar-height));
+    background: var(--background-base-lower);
+  }
+  > [class*="scrollerBase"] {
+    top: 0;
+    position: absolute;
+    height: inherit;
+    padding-top: calc(2 * (var(--custom-channel-header-height) + var(--custom-app-top-bar-height)));
+  }
 }
