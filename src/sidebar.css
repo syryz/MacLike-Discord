@@ -1,22 +1,28 @@
-html.theme-dark, html.theme-ash, html.theme-onyx {
-  color-scheme: dark !important;
-  &::before {
-    pointer-events: none;
-    opacity: var(--window-border);
-    border-radius: 8px;
-    content: "";
-    position: fixed;
-    height: 100dvh;
-    width: 100dvw;
-    z-index: 100000;
-    box-shadow: inset 0 0 0 2px #ffffff30, inset 0 4px 0px -2px #ffffff30;
+html {
+  --glass-opacity: var(--glass-opacity_inactive);
+  &.theme-dark, &.theme-ash, &.theme-onyx {
+    color-scheme: dark !important;
+    &::before {
+      pointer-events: none;
+      opacity: var(--enable-window-border);
+      border-radius: 8px;
+      content: "";
+      position: fixed;
+      height: 100dvh;
+      width: 100dvw;
+      z-index: 100000;
+      box-shadow: inset 0 0 0 2px #ffffff30, inset 0 4px 0px -2px #ffffff30;
+    }
   }
-}
-html.theme-light {
-  color-scheme: light !important;
-}
-html.platform-win {
-  background-color: light-dark(var(--main-app-bg_light), var(--main-app-bg_dark));
+  &.theme-light {
+    color-scheme: light !important;
+  }
+  &.platform-win {
+    background-color: light-dark(var(--main-app-bg_light), var(--main-app-bg_dark));
+  }
+  &.app-focused {
+    --glass-opacity: var(--glass-opacity_active);
+  }
 }
 * {
   --background-base-lowest: transparent !important;
@@ -25,7 +31,7 @@ html.platform-win {
 div[class^="sidebarRegion"], div[class*=SidebarView], div[data-layer="USER_SETTINGS"] {
   background: transparent !important;
 }
-div[class^="page"]::before {
+div[class^="page_"]::before {
   content: "";
   width: 100%;
   height: 100%;
