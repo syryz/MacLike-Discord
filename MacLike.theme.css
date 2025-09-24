@@ -29,7 +29,8 @@
 
   --enable-window-border: 1; /* to turn off, set to 0 */
 
-  --glass-opacity: 80%;
-  --glass-blur-strength: 50px;
-  --glass-blur-saturation: 120%;
+  --glass-opacity_active: 84%;
+  --glass-opacity_inactive: 100%;
+  --glass-blur-strength: 30px;
+  --glass-blur-saturation: 200%;
 }
