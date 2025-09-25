@@ -7,7 +7,18 @@ div[class^="bar"] {
     translate: calc((var(--custom-guild-sidebar-width) + var(--custom-guild-list-width)) / 3) 0;
   }
 }
+div[class^="sidebar_"] [class^="itemsContainer"] {
+  margin-top: 6px !important;
+}
 div[class^="winButtons"] {
+  --window-button-min_1: url("data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIxNiIgaGVpZ2h0PSIxNiIgeG1sbnM6dj0iaHR0cHM6Ly92ZWN0YS5pby9uYW5vIj4KICA8cmVjdCByeT0iMCIgaGVpZ2h0PSIxNiIgd2lkdGg9IjE2IiBvcGFjaXR5PSIwIiBwYWludC1vcmRlcj0ibWFya2VycyBzdHJva2UgZmlsbCIgLz4KICA8cmVjdCB3aWR0aD0iOCIgaGVpZ2h0PSIyIiB4PSI0IiB5PSI3IiByeT0iMSIgb3BhY2l0eT0iLjUiIC8+Cjwvc3ZnPg==");
+  --window-button-max_1: url("data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIxNiIgaGVpZ2h0PSIxNiIgeG1sbnM6dj0iaHR0cHM6Ly92ZWN0YS5pby9uYW5vIj48cmVjdCB3aWR0aD0iMTYiIGhlaWdodD0iMTYiIHJ5PSIwIiBvcGFjaXR5PSIwIiBwYWludC1vcmRlcj0ibWFya2VycyBzdHJva2UgZmlsbCIvPjxwYXRoIGQ9Ik02LjQxNCA1TDExIDkuNTg2VjZjMC0uNDE1LS41ODQtMS0xLTF6TTUgNi40MTRWMTBjMCAuNDE1LjU4NSAxIDEgMWgzLjU4NnoiIG9wYWNpdHk9Ii41Ii8+PC9zdmc+");
+  --window-button-restore_1: url("data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIxNiIgaGVpZ2h0PSIxNiIgeG1sbnM6dj0iaHR0cHM6Ly92ZWN0YS5pby9uYW5vIj48cmVjdCB3aWR0aD0iMTYiIGhlaWdodD0iMTYiIHJ5PSIwIiBvcGFjaXR5PSIwIiBwYWludC1vcmRlcj0ibWFya2VycyBzdHJva2UgZmlsbCIvPjxwYXRoIGQ9Ik03Ljk5OSAzLjQwOXYzLjU4NmMwIC40MTYuNTg0IDEgMSAxaDMuNTg2ek04IDEyLjU5VjkuMDA0YzAtLjQxNi0uNTg0LTEtMS0xSDMuNDE0eiIgb3BhY2l0eT0iLjUiLz48L3N2Zz4=");
+  --window-button-close_1: url("data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIxNiIgaGVpZ2h0PSIxNiIgeG1sbnM6dj0iaHR0cHM6Ly92ZWN0YS5pby9uYW5vIj48cmVjdCByeT0iMCIgaGVpZ2h0PSIxNiIgd2lkdGg9IjE2IiBvcGFjaXR5PSIwIiBwYWludC1vcmRlcj0ibWFya2VycyBzdHJva2UgZmlsbCIvPjxwYXRoIGQ9Ik01LjE3MiA1LjE3MmExIDEgMCAwIDAgMCAxLjQxNEw2LjU4NiA4IDUuMTcyIDkuNDE0YTEgMSAwIDAgMCAxLjQxNCAxLjQxNEw4IDkuNDE0bDEuNDE0IDEuNDE0YTEgMSAwIDAgMCAxLjQxNC0xLjQxNEw5LjQxNCA4bDEuNDE0LTEuNDE0YTEgMSAwIDAgMC0xLjQxNC0xLjQxNEw4IDYuNTg2IDYuNTg2IDUuMTcyYTEgMSAwIDAgMC0xLjQxNCAweiIgb3BhY2l0eT0iLjUiLz48L3N2Zz4=");
+  --window-button-close_2: url(data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMTIiIGhlaWdodD0iMTIiIHZpZXdCb3g9IjAgMCAxMiAxMiIgZmlsbD0ibm9uZSIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj4KPHBhdGggZD0iTTUuMjkyODkgNkwyLjgxODAxIDMuNTI1MTNMMy41MjUxMiAyLjgxODAyTDUuOTk5OTkgNS4yOTI4OUw4LjQ3NDg3IDIuODE4MDJMOS4xODE5NyAzLjUyNTEzTDYuNzA3MSA2TDkuMTgxOTcgOC40NzQ4N0w4LjQ3NDg3IDkuMTgxOThMNS45OTk5OSA2LjcwNzExTDMuNTI1MTIgOS4xODE5OEwyLjgxODAxIDguNDc0ODdMNS4yOTI4OSA2WiIgZmlsbD0iI0EyMDAwOCIvPgo8L3N2Zz4=);
+  --window-button-min_2: url(data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMTMiIGhlaWdodD0iMTMiIGZpbGw9Im5vbmUiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyI+PHBhdGggZD0iTTEwLjgzMyA1Ljg1SDIuMTY3djEuM2g4LjY2N3oiIGZpbGw9IiNCMzcxMUEiLz48L3N2Zz4=);
+  --window-button-max_2: url(data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMTIiIGhlaWdodD0iMTIiIHZpZXdCb3g9IjAgMCAxMiAxMiIgZmlsbD0ibm9uZSIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj4KPHBhdGggZD0iTTcuMzkyOTMgMy4wMDg5M0wzLjAwODg3IDcuMzkyOTlMMi44MTc5NSAyLjgxODAxTDcuMzkyOTMgMy4wMDg5M1oiIGZpbGw9IiMwMjZBMTUiLz4KPHBhdGggZD0iTTQuNjA2OTUgOC45OTEwMUw4Ljk5MTAxIDQuNjA2OTVMOS4xODE5MyA5LjE4MTkzTDQuNjA2OTUgOC45OTEwMVogIiBmaWxsPSIjMDI2QTE1Ii8+Cjwvc3ZnPg==);
+
   app-region: no-drag;
   z-index: 10000 !important;
   order: -1 !important;
@@ -18,7 +29,7 @@ div[class^="winButtons"] {
   &::before {
     display: none !important;
   }
-  &:hover > *::after {
+  &:hover > ::after {
     opacity: 1 !important;
   }
 }
@@ -33,39 +44,39 @@ div[class*="winButton_"] {
   border-radius: 50px;
   box-shadow: inset 0 0 0px 1px light-dark(#00000010, #00000000) !important;
   background-color: light-dark(#c1c1c170, #5d5d5d70) !important;
+  background-repeat: no-repeat;
+  background-size: contain;
+  background-position: center;
   content: none !important;
-  &[aria-label="Close"] {
-    order: -1 !important;
-  }
   &::after  {
     content: "" !important;
     position: absolute !important;
-    translate: -2px -2px !important;
     width: 12px !important;
     height: 12px !important;
     opacity: 0 !important;
-    scale: 1.1 !important;
+    align-self: center;
   }
   & > svg {
     display: none !important;
   }
 }
 div[class^="winButtons"]:hover, html.app-focused {
-  div[class^="winButton"][aria-label="Minimize"] {
+  [aria-label="Minimize"] {
     background-color: #febc2e !important;
     &:active {
       background-color: #b19021 !important;
     }
   }
 
-  div[class^="winButton"][aria-label="Maximize"], div[class^="winButton"][aria-label="Restore"] {
+  [aria-label="Maximize"], [aria-label="Restore"] {
     background-color: #28c840 !important;
     &:active {
       background-color: #2d903e !important;
     }
   }
 
-  div[class^="winButton"][aria-label="Close"] {
+  [aria-label="Close"] {
+    order: -1 !important;
     background-color: #ff5f57 !important;
     &:active {
       background-color: #a24646 !important;
@@ -73,25 +84,38 @@ div[class^="winButtons"]:hover, html.app-focused {
   }
 }
 
-div[class^="winButton"][aria-label="Close"]::after {
-  background-image: var(--window-button-close);
-  transform: translate(0px, -0.5px);
+@container style(--window-button-style: 1) {
+  div[class^="winButton"][aria-label="Close"]::after {
+    background-image: var(--window-button-close_1);
+    transform: translate(-1.5px, -1.5px);
+  }
+  div[class^="winButton"][aria-label="Minimize"]::after {
+    background-image: var(--window-button-min_1);
+    transform: translate(-1.5px, -1.5px);
+  }
+  div[class^="winButton"][aria-label="Maximize"]::after {
+    background-image: var(--window-button-max_1);
+    transform: translate(-1.5px, -1.5px);
+  }
+  div[class^="winButton"][aria-label="Restore"]::after {
+    background-image: var(--window-button-restore_1);
+    transform: translate(0px, -0.5px);
+  }
 }
 
-div[class^="winButton"][aria-label="Minimize"]::after {
-  background-image: var(--window-button-min);
-}
-
-div[class^="winButton"][aria-label="Maximize"]::after {
-  background-image: var(--window-button-max);
-  transform: translate(0px, -0.5px);
-}
-
-div[class^="winButton"][aria-label="Restore"]::after {
-  background-image: var(--window-button-restore);
-  transform: translate(0px, -0.5px);
-}
-
-div[class^="sidebar_"] [class^="itemsContainer"] {
-  margin-top: 6px !important;
+@container style(--window-button-style: 2) {
+  div[class^="winButtons"]:hover {
+    div[class^="winButton"][aria-label="Close"] {
+      background-image: var(--window-button-close_2);
+    }
+    div[class^="winButton"][aria-label="Minimize"] {
+      background-image: var(--window-button-min_2);
+    }
+    div[class^="winButton"][aria-label="Maximize"] {
+      background-image: var(--window-button-max_2);
+    }
+    div[class^="winButton"][aria-label="Restore"] {
+      background-image: var(--window-button-restore_2);
+    }
+  }
 }
