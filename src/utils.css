@@ -14,23 +14,21 @@
   --glass-blur-saturation: 200%;
 
   --maclike-version_checker: true; /* Disable: false */
-  --maclike-version_current: "1.1.2"; /* DO NOT CHANGE */
   --maclike-version_latest: "1.1.2"; /* DO NOT CHANGE */
 }
 /* VERSION CHECKER */
-@container not style(--maclike-version_current: var(--maclike-version_latest)) {
-  div[class^="bar"] > [class^="title"] > div::before {
-    content: "Outdated MacLike version! Update your MacLike.theme.css\AYour version: " var(--maclike-version_current) "\A Latest version: " var(--maclike-version_latest) "\Ahttps://github.com/syryz/MacLike-Discord/blob/main/MacLike.theme.css";
-    position: absolute;
-    top: 0;
-    color: white;
-    height: auto;
-    width: auto;
-    background: red;
-    white-space: pre-wrap;
-  }
+div[class^="bar"] > [class^="title"] > div::before {
+  content: "Outdated MacLike version! Update your MacLike.theme.css\AYour version: " var(--maclike-version_current) "\A Latest version: " var(--maclike-version_latest) "\Ahttps://github.com/syryz/MacLike-Discord/blob/main/MacLike.theme.css";
+  position: absolute;
+  top: 0;
+  color: white;
+  height: auto;
+  width: auto;
+  background: red;
+  white-space: pre-wrap;
 }
-@container style(--maclike-version_checker: false) {
+
+@container style(--maclike-version_current: var(--maclike-version_latest)) and style(--maclike-version_checker: true) {
   div[class^="bar"] > [class^="title"] > div::before {
     display: none;
   }
