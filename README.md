@@ -51,7 +51,7 @@ A Discord client mod is required. BetterDiscord or Vencord is recommended.
 ---
 ## Planned Features
 - [ ] **Font Integration**: Replacing the default font with SF Fonts
-- [ ] **Animations**: Replicate macOS-style UI animations and transitions
+- [ ] **Animations**: Replicate macOS-style UI animations and transitions (context menu)
 - [ ] **Theme Settings Plugin**: Streamline customization options
 
 ### Known Issues
