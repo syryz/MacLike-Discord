@@ -54,6 +54,7 @@
         background: var(--background-base-lower);
       }
       > [class*="scrollerBase"] {
+        width: 100%;
         top: 0;
         position: absolute;
         height: inherit;
