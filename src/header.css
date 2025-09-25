@@ -24,41 +24,45 @@
     }
   }
   div[class^="page_"] {
+    --header-height: calc(var(--custom-channel-header-height) + var(--custom-app-top-bar-height));
     overflow: hidden;
     height: calc(100% + var(--custom-app-top-bar-height)) !important;
     translate: 0 calc(var(--custom-app-top-bar-height) * -1) !important;
     div[class^="messagesWrapper"] > div[class^="scroller"] {
       &::-webkit-scrollbar-track {
-        margin-top: calc(var(--custom-channel-header-height) + var(--custom-app-top-bar-height));
+        margin-top: var(--header-height);
       }
       [class^="scrollerInner"] > [class^="container"] {
-        margin-top: calc(var(--custom-channel-header-height) + var(--custom-app-top-bar-height));
+        margin-top: var(--header-height);
       }
     }
     [class^="membersWrap"] {
       > ::-webkit-scrollbar-track {
-        margin-top: calc(var(--custom-channel-header-height) + var(--custom-app-top-bar-height));
+        margin-top: var(--header-height);
       }
-      [aria-label="Members"] {
-        padding-top: calc(var(--custom-channel-header-height) + var(--custom-app-top-bar-height));
+      *:has(> [class^="membersGroup_"]) {
+        padding-top: var(--header-height);
       }
     }
-  }
-}
-
-[class^="searchResultsWrap"] {
-  height: 100vh;
-  > ::-webkit-scrollbar-track {
-    margin-top: calc(2 * (var(--custom-channel-header-height) + var(--custom-app-top-bar-height)));
-  }
-  > [class^="searchHeader"] {
-    margin-top: calc(var(--custom-channel-header-height) + var(--custom-app-top-bar-height));
-    background: var(--background-base-lower);
-  }
-  > [class*="scrollerBase"] {
-    top: 0;
-    position: absolute;
-    height: inherit;
-    padding-top: calc(2 * (var(--custom-channel-header-height) + var(--custom-app-top-bar-height)));
+    [class^="searchResultsWrap"] {
+      height: 100vh;
+      > ::-webkit-scrollbar-track {
+        margin-top: calc(2 * var(--header-height));
+      }
+      > [class^="searchHeader"] {
+        margin-top: var(--header-height);
+        background: var(--background-base-lower);
+      }
+      > [class*="scrollerBase"] {
+        top: 0;
+        position: absolute;
+        height: inherit;
+        padding-top: calc(2 * var(--header-height));
+      }
+    }
+    .user-profile-sidebar {
+      padding-top: var(--header-height);
+      height: calc(100vh - var(--header-height));
+    }
   }
 }
