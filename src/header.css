@@ -1,4 +1,4 @@
-#app-mount:has(div[class^="subtitleContainer"]) {
+#app-mount {
   div[class^="subtitleContainer"] {
     position: absolute !important;
     width: 100% !important;
