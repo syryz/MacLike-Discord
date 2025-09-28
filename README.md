@@ -38,14 +38,15 @@ A Discord client mod is required. BetterDiscord or Vencord is recommended.
 - Open the CSS file through QuickCSS or navigating to the themes folder and opening the `MacLike.theme.css` file with a text editor.
 - Edit the sidebar background and blur to your liking!
 - Turn off the window border if unwanted.
-### Enable Translucency
+### Enable Translucency/Fix Rounded Corners
 1. Install [MicaForEveryone](https://github.com/MicaForEveryone/MicaForEveryone).
 2. Add new rule > Add process rule.
 3. Enter `Discord`.
-4. Set the Backdrop Type to `Acrylic` and switch on `Extend frame into client area` and `Enable blur behind`.
-5. Go to Discord settings.
-6. In the BetterDiscord or Vencord settings page, check `Enable window transparency.`
-7. Fully restart Discord.
+4. Set Backdrop Type to `Acrylic` and switch on `Extend frame into client area` and `Enable blur behind`.
+5. Set Corner Preference to `Rounded`
+6. Go to Discord settings.
+7. In the BetterDiscord or Vencord settings page, check `Enable window transparency.`
+8. Fully restart Discord.
 
 
 ---
