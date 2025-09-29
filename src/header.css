@@ -40,9 +40,9 @@
       > ::-webkit-scrollbar-track {
         margin-top: var(--header-height);
       }
-      *:has(> [class^="membersGroup_"]) {
+      /* *:has(> [class^="membersGroup_"]) {
         padding-top: var(--header-height);
-      }
+      } */
     }
     [class^="searchResultsWrap"] {
       height: 100vh;
@@ -62,7 +62,7 @@
       }
     }
     div[class^="content_"] > div > [class*="scrollerBase"] {
-      margin-top: var(--header-height);
+      padding-top: var(--header-height);
     }
     .user-profile-sidebar {
       padding-top: var(--header-height);
