@@ -1,69 +1,204 @@
-#app-mount {
-  div[class^="subtitleContainer"] {
-    position: absolute !important;
-    width: 100% !important;
-    > [aria-label="Channel header"] {
-      height: auto !important;
-      padding-top: calc(var(--custom-app-top-bar-height) + var(--space-8));
-      /* background: color-mix(in oklab, var(--background-gradient-lower,var(--__header-bar-background)) 100%, transparent); */
-      background: transparent;
+:root {
+  --bg-low: color-mix(in oklab,var(--neutral-82) var(--glass-opacity),var(--custom-theme-base-color,#000) var(--custom-theme-base-color-amount,0%));
+  --bg-lower: color-mix(in oklab,var(--neutral-86) var(--glass-opacity),var(--custom-theme-base-color,#000) var(--custom-theme-base-color-amount,0%));
+}
+
+div[class^="subtitleContainer"] {
+  position: absolute !important;
+  width: 100% !important;
+  > [aria-label="Channel header"] {
+    height: auto !important;
+    padding-top: calc(var(--custom-app-top-bar-height) + var(--space-8));
+    background: transparent;
+    /* background: color-mix(in oklab, var(--background-gradient-lower,var(--__header-bar-background)) 100%, transparent); */
+    backdrop-filter: blur(var(--glass-blur-strength)) saturate(var(--glass-blur-saturation));
+    &::before {
+      content: "";
+      position: fixed;
+      height: 100vh;
+      width: 100vw;
+      bottom: 0;
+      left: 0;
+      background: var(--background-gradient-lower,var(--__header-bar-background));
+      opacity: var(--glass-opacity);
+    }
+    div[class^="children"]::after {
+      display: none;
+    }
+  }
+}
+div[class^="page_"] {
+  --header-height: calc(var(--custom-channel-header-height) + var(--custom-app-top-bar-height));
+  overflow: hidden;
+  height: calc(100% + var(--custom-app-top-bar-height)) !important;
+  translate: 0 calc(var(--custom-app-top-bar-height) * -1) !important;
+  div[class^="messagesWrapper"] > div[class^="scroller"] {
+    &::-webkit-scrollbar-track {
+      margin-top: var(--header-height);
+    }
+    [class^="scrollerInner"] > [class^="container"] {
+      margin-top: var(--header-height);
+    }
+  }
+  [class^="membersWrap"] {
+    > ::-webkit-scrollbar-track {
+      margin-top: var(--header-height);
+    }
+    [class*="scrollerBase"] {
+      padding-top: var(--header-height);
+    }
+  }
+  [class^="searchResultsWrap"] {
+    height: 100vh;
+    > ::-webkit-scrollbar-track {
+      margin-top: calc(2 * var(--header-height));
+    }
+    > [class^="searchHeader"] {
+      margin-top: var(--header-height);
+      background: var(--background-base-lower);
+    }
+    > [class*="scrollerBase"] {
+      width: 100%;
+      top: 0;
+      position: absolute;
+      height: inherit;
+      padding-top: calc(2 * var(--header-height));
+    }
+  }
+  .user-profile-sidebar {
+    padding-top: var(--header-height);
+    height: calc(100vh - var(--header-height));
+  }
+  div[class^="chatLayerWrapper"] {
+    div[class^="container"] {
+        /* padding-top: var(--custom-app-top-bar-height); */
+      [aria-label="Thread header"] {
+        height: auto !important;
+        padding-top: calc(var(--custom-app-top-bar-height) + var(--space-8));
+        background: transparent;
+        backdrop-filter: blur(var(--glass-blur-strength)) saturate(var(--glass-blur-saturation));
+        &::before {
+          content: "";
+          position: fixed;
+          height: 100vh;
+          width: 100vw;
+          bottom: 0;
+          left: 0;
+          background: var(--background-gradient-lower,var(--__header-bar-background));
+          opacity: var(--glass-opacity);
+        }
+      }
+      [class^="chat"] {
+        width: inherit;
+        > [class^="chatContent"] {
+          position: fixed;
+          width: inherit;
+          top: 0;
+          height: 100vh;
+        }
+      }
+    }
+  }
+  div[class^="content"] > div[class^="container"] {
+    > ::-webkit-scrollbar-track {
+      margin-top: var(--header-height);
+    }
+    > [class*="scrollerBase"] {
+      padding-top: var(--header-height);
+    }
+  }
+  /* Friends */
+  > [aria-label="Friends"] {
+    > section[role="navigation"] {
+      height: auto;
+      padding-top: var(--custom-app-top-bar-height);
+      background-color: transparent;
       backdrop-filter: blur(var(--glass-blur-strength)) saturate(var(--glass-blur-saturation));
       &::before {
         content: "";
         position: absolute;
-        height: 100vh;
+        height: 100%;
         width: 100vw;
         bottom: 0;
         left: 0;
         background: var(--background-gradient-lower,var(--__header-bar-background));
         opacity: var(--glass-opacity);
       }
-      div[class^="children"]::after {
-        display: none;
+    }
+    > [class^="tabBody"] {
+      position: absolute;
+      width: 100%;
+      > [class^="peopleColumn"] {
+        position: relative;
+        > [class^="searchBar"] {
+          margin-top: var(--header-height);
+          z-index: 100;
+          width: var(--form-input-height);
+          transition: width 200ms ease;
+          position: absolute;
+          right: 20px;
+          &:focus-within {
+            width: 50%;
+            [class^="wrapper"] > input {
+              cursor: auto;
+              position: static;
+              opacity: 1;
+            }
+          }
+          [class^="wrapper"] {
+            backdrop-filter: blur(20px) saturate(var(--glass-blur-saturation));
+            background: var(--bg-lower);
+            > input {
+              cursor: pointer;
+              position: absolute;
+              opacity: 0;
+            }
+          }
+        }
+        > [data-list-id="people"] {
+          width: 100%;
+          height: 100vh;
+          &::-webkit-scrollbar-track {
+            margin-top: var(--header-height);
+          }
+          > div {
+            padding-top: var(--header-height);
+          }
+        }
+      }
+      > [class^="nowPlayingColumn"] [class^="scroller"] {
+        padding-top: var(--header-height);
+        &::-webkit-scrollbar-track {
+          margin-top: var(--header-height);
+        }
       }
     }
   }
-  div[class^="page_"] {
-    --header-height: calc(var(--custom-channel-header-height) + var(--custom-app-top-bar-height));
-    overflow: hidden;
-    height: calc(100% + var(--custom-app-top-bar-height)) !important;
-    translate: 0 calc(var(--custom-app-top-bar-height) * -1) !important;
-    div[class^="messagesWrapper"] > div[class^="scroller"] {
-      &::-webkit-scrollbar-track {
-        margin-top: var(--header-height);
-      }
-      [class^="scrollerInner"] > [class^="container"] {
-        margin-top: var(--header-height);
-      }
-    }
-    [class^="membersWrap"] {
-      > ::-webkit-scrollbar-track {
-        margin-top: var(--header-height);
-      }
-      [class*="scrollerBase"] {
-        padding-top: var(--header-height);
-      }
-    }
-    [class^="searchResultsWrap"] {
-      height: 100vh;
-      > ::-webkit-scrollbar-track {
-        margin-top: calc(2 * var(--header-height));
-      }
-      > [class^="searchHeader"] {
-        margin-top: var(--header-height);
-        background: var(--background-base-lower);
-      }
-      > [class*="scrollerBase"] {
-        width: 100%;
-        top: 0;
+  div[class^="homeWrapper"] {
+    > section[role="navigation"] {
+      background-color: transparent;
+      backdrop-filter: blur(var(--glass-blur-strength)) saturate(var(--glass-blur-saturation));
+      &::before {
+        content: "";
         position: absolute;
-        height: inherit;
-        padding-top: calc(2 * var(--header-height));
+        height: 100%;
+        width: 100vw;
+        bottom: 0;
+        left: 0;
+        background: var(--background-gradient-lower,var(--__header-bar-background));
+        opacity: var(--glass-opacity);
+      }
+      [class^="children"]::after {
+        display: none;
       }
     }
-    .user-profile-sidebar {
-      padding-top: var(--header-height);
-      height: calc(100vh - var(--header-height));
+    > div[class^="mainPageScroller"] {
+      position: absolute;
+      height: 100%;
+      width: 100%;
+      &::-webkit-scrollbar-track {
+          margin-top: var(--custom-channel-header-height);
+      }
     }
   }
 }
