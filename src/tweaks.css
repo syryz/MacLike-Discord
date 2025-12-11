@@ -1,7 +1,7 @@
 @import url(https://raw.githubusercontent.com/syryz/MacLike-Discord/refs/heads/main/src/utils.css);
 
 html.theme-dark, html.theme-ash, html.theme-onyx {
-  :not(.platform-osx)::before {
+  :not(.platform-osx) > body::before {
     pointer-events: none;
     opacity: var(--enable-window-border);
     border-radius: 8px;
