@@ -1,3 +1,16 @@
+html.theme-dark, html.theme-ash, html.theme-onyx {
+  :not(.platform-osx)::before {
+    pointer-events: none;
+    opacity: var(--enable-window-border);
+    border-radius: 8px;
+    content: "";
+    position: fixed;
+    height: 100dvh;
+    width: 100dvw;
+    z-index: 100000;
+    box-shadow: inset 0 0 0 2px #ffffff30, inset 0 4px 0px -2px #ffffff30;
+  }
+}
 div[class^="scrim"] {
   --scrim-default: transparent;
   pointer-events: none;
