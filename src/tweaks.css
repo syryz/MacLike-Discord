@@ -1,3 +1,5 @@
+@import url(https://raw.githubusercontent.com/syryz/MacLike-Discord/refs/heads/main/src/utils.css);
+
 html.theme-dark, html.theme-ash, html.theme-onyx {
   :not(.platform-osx)::before {
     pointer-events: none;
