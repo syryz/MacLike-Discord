@@ -48,6 +48,7 @@ Windows
 6. Go to Discord settings.
 7. In the BetterDiscord or Vencord settings page, check `Enable window transparency.`
 8. Fully restart Discord.
+
 MacOS
 1. Go to Discord settings > BetterDiscord/Vencord Settings.
 2. Make sure `Enable window transparency` is unchecked (off).
