@@ -39,6 +39,7 @@ A Discord client mod is required. BetterDiscord or Vencord is recommended.
 - Edit the sidebar background and blur to your liking!
 - Turn off the window border if unwanted.
 ### Enable Translucency/Fix Rounded Corners
+Windows
 1. Install [MicaForEveryone](https://github.com/MicaForEveryone/MicaForEveryone).
 2. Add new rule > Add process rule.
 3. Enter `Discord`.
@@ -47,7 +48,11 @@ A Discord client mod is required. BetterDiscord or Vencord is recommended.
 6. Go to Discord settings.
 7. In the BetterDiscord or Vencord settings page, check `Enable window transparency.`
 8. Fully restart Discord.
-
+MacOS
+1. Go to Discord settings > BetterDiscord/Vencord Settings.
+2. Make sure `Enable window transparency` is unchecked (off).
+3. Under `Window vibrancy style`, select `HUD (Most transparent)`
+4. Fully restart Discord.
 
 ---
 ## Planned Features
