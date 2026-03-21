@@ -15,6 +15,7 @@ A clean, minimalist Discord theme aiming to create a more native, macOS-like exp
 * **Translucency**: Incorporates a subtle background blur (mica/acrylic effect) on various UI elements for depth.
 * **Mac-style Sidebar**: Replicates a native macOS app look
 * **Rounded Corners**: Consistent use of corner radii
+* **Theme Support**: Support for native Discord color themes (Appearance settings). Full restart required when applying a new theme. I cannot fix this; it is an issue on Discord's end.
 
 ---
 ## Installation
