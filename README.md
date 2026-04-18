@@ -55,6 +55,8 @@ MacOS
 2. Make sure `Enable window transparency` is unchecked (off).
 3. Under `Window vibrancy style`, select `HUD (Most transparent)`
 4. Fully restart Discord.
+### Auto-Apply Theme (After Discord Updates)
+- Install [BetterVencordPatch](https://github.com/AaronWijesinghe/BetterVencordPatch)
 
 ---
 ## Planned Features
@@ -63,7 +65,7 @@ MacOS
 - [ ] **Theme Settings Plugin**: Streamline customization options
 
 ### Known Issues
-- Switching between light and dark themes removes transparency.
+- Switching between light and dark themes removes transparency. This is an issue with Discord/Vencord's implementation, so it cannot be fixed on my end.
 
 ### Credits
 - Inspiration from macOS apps
