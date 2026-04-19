@@ -68,7 +68,7 @@ MacOS
 - Switching between light and dark themes removes transparency. This is an issue with Discord/Vencord's implementation, so it cannot be fixed on my end.
 
 ### Credits
-- Inspiration from macOS apps
+- Huge thanks to [hxntxihero](https://github.com/hxntxihero) for Windows compatibility.
 - Part of the WAM project
 
 Created by *syrys*
