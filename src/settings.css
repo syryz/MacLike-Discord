@@ -1,8 +1,10 @@
 :root {
   --settings-header-height: 48px;
 }
-#app-mount:has(div[data-mana-component="layer-modal"]) div[class^="app_"]{
-  display: none;
+#app-mount:has(div[data-mana-component="layer-modal"]) {
+  div[class^="app_"], div[class*="systemBar_"] {
+    display: none;
+  }
 }
 div[data-mana-component="layer-modal"] {
   padding-top: 0 !important;
