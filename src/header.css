@@ -2,6 +2,19 @@
   --bg-low: color-mix(in oklab,var(--neutral-82) var(--glass-opacity),var(--custom-theme-base-color,#000) var(--custom-theme-base-color-amount,0%));
   --bg-lower: color-mix(in oklab,var(--neutral-86) var(--glass-opacity),var(--custom-theme-base-color,#000) var(--custom-theme-base-color-amount,0%));
 }
+div[class^="bar_"] {
+  app-region: no-drag;
+  pointer-events: none;
+}
+div[class^="title_"] {
+  app-region: drag;
+}
+div[class^="header_"] {
+  app-region: drag;
+  > * {
+    app-region: no-drag;
+  }
+}
 
 div[class^="subtitleContainer"] {
   position: absolute !important;
@@ -11,7 +24,7 @@ div[class^="subtitleContainer"] {
     padding-top: calc(var(--custom-app-top-bar-height) + var(--space-8));
     background: transparent;
     /* background: color-mix(in oklab, var(--background-gradient-lower,var(--__header-bar-background)) 100%, transparent); */
-    backdrop-filter: blur(var(--glass-blur-strength)) saturate(var(--glass-blur-saturation));
+    backdrop-filter: blur(var(--glass-blur-strength)) saturate(var(--glass-blur-saturation)) brightness(var(--glass-brightness));
     &::before {
       content: "";
       position: fixed;
@@ -76,7 +89,7 @@ div[class^="page_"] {
         height: auto !important;
         padding-top: calc(var(--custom-app-top-bar-height) + var(--space-8));
         background: transparent;
-        backdrop-filter: blur(var(--glass-blur-strength)) saturate(var(--glass-blur-saturation));
+        backdrop-filter: blur(var(--glass-blur-strength)) saturate(var(--glass-blur-saturation)) brightness(var(--glass-brightness));
         &::before {
           content: "";
           position: fixed;
@@ -113,7 +126,7 @@ div[class^="page_"] {
       height: auto;
       padding-top: var(--custom-app-top-bar-height);
       background-color: transparent;
-      backdrop-filter: blur(var(--glass-blur-strength)) saturate(var(--glass-blur-saturation));
+      backdrop-filter: blur(var(--glass-blur-strength)) saturate(var(--glass-blur-saturation)) brightness(var(--glass-brightness));
       &::before {
         content: "";
         position: absolute;
@@ -146,7 +159,7 @@ div[class^="page_"] {
             }
           }
           [class^="wrapper"] {
-            backdrop-filter: blur(20px) saturate(var(--glass-blur-saturation));
+            backdrop-filter: blur(20px) saturate(var(--glass-blur-saturation)) brightness(var(--glass-brightness));
             background: var(--bg-lower);
             > input {
               cursor: pointer;
@@ -177,7 +190,7 @@ div[class^="page_"] {
   div[class^="homeWrapper"] {
     > section[role="navigation"] {
       background-color: transparent;
-      backdrop-filter: blur(var(--glass-blur-strength)) saturate(var(--glass-blur-saturation));
+      backdrop-filter: blur(var(--glass-blur-strength)) saturate(var(--glass-blur-saturation)) brightness(var(--glass-brightness));
       &::before {
         content: "";
         position: absolute;
@@ -200,5 +213,23 @@ div[class^="page_"] {
           margin-top: var(--custom-channel-header-height);
       }
     }
+  }
+}
+
+div[data-mana-component="layer-modal"] {
+  div[class^="contentHeader_"] {
+    --settings-header-background: color-mix(in srgb, var(--background-base-low) var(--glass-opacity), transparent);
+    box-sizing: border-box;
+    position: absolute;
+    z-index: 100;
+    width: 100%;
+    padding-inline: 0;
+    padding-left: var(--space-16);
+    padding-right: var(--space-8);
+    background: var(--settings-header-background);
+    backdrop-filter: blur(var(--glass-blur-strength)) saturate(var(--glass-blur-saturation)) brightness(var(--glass-brightness));
+  }
+  div[class^="scroller"]::-webkit-scrollbar-track {
+      margin-top: var(--settings-header-height);
   }
 }
