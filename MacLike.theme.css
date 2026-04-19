@@ -3,33 +3,34 @@
  * @version 1.0.0
  * @description A theme borrowing MacOS design language. Part of the WAM project.
  * @author syrys
- */
+*/
 
+/* DO NOT TOUCH (unless you know what you are doing) */
 @import url(https://raw.githubusercontent.com/syryz/MacLike-Discord/refs/heads/main/src/sidebar.css);
 @import url(https://raw.githubusercontent.com/syryz/MacLike-Discord/refs/heads/main/src/window-buttons.css);
 @import url(https://raw.githubusercontent.com/syryz/MacLike-Discord/refs/heads/main/src/tweaks.css);
+@import url(https://raw.githubusercontent.com/syryz/MacLike-Discord/refs/heads/main/src/settings.css);
 
+/* All lines below are settings. Remove as you wish. */
 /* Safari-like Header/Address Bar !!EXPERIMENTAL!! */
-/* Comment out if unwanted */
 @import url(https://raw.githubusercontent.com/syryz/MacLike-Discord/refs/heads/main/src/header.css);
 /* Apple Emojis */
 @import url(https://mwittrien.github.io/BetterDiscordAddons/Themes/EmojiReplace/base/Apple.css);
 
 /* MAIN SETTINGS */
 :root {
-  --main-app-bg_light: rgba(238, 238, 238, 0.7);
-  --main-app-bg_dark: rgba(36, 36, 36, 0.7);
+  --main-app-bg_light: rgba(36, 36, 36, 0.8);
+  --main-app-bg_dark: rgba(36, 36, 36, 0.8);
 
   --window-button-style: 2; /* Recommended: 2 */
-  --window-button-size: 13px;
+  --window-button-size: 13px; /* Mac Default: 13px */
 
   --enable-window-border: 1; /* Disable: 0 */
 
-  --glass-opacity_active: 84%;
-  --glass-opacity_inactive: 100%;
-  --glass-blur-strength: 30px;
-  --glass-blur-saturation: 200%;
-
-  --maclike-version_checker: true;
-  --maclike-version_current: "1.1.2"; /* DO NOT CHANGE */
+  --glass-opacity_active: 80%; /* Mac Default: 80% */
+  --glass-opacity_inactive: 100%; /* Mac Default: 100% */
+  --glass-brightness_dark: 90%; /* Mac Default: 90% */
+  --glass-brightness_light: 110%; /* Mac Default: 100% */
+  --glass-blur-strength: 33px; /* Mac Default: 33px */
+  --glass-blur-saturation: 150%; /* Mac Default: 150% */
 }
