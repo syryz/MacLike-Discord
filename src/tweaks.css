@@ -12,6 +12,7 @@ html.theme-dark, html.theme-ash, html.theme-onyx {
   }
 }
 div[class^="scrim"] {
+  --background-scrim: transparent;
   --scrim-default: transparent;
   pointer-events: none;
 }
