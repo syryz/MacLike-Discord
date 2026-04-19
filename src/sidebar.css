@@ -1,16 +1,14 @@
-@import url(https://raw.githubusercontent.com/syryz/MacLike-Discord/refs/heads/main/src/utils.css);
-
 html {
-  --glass-opacity: var(--glass-opacity_inactive);
+  background-color: light-dark(var(--main-app-bg_light), var(--main-app-bg_dark));
   &.theme-dark, &.theme-ash, &.theme-onyx {
     color-scheme: dark !important;
+    --glass-brightness: var(--glass-brightness_dark);
   }
   &.theme-light {
     color-scheme: light !important;
+    --glass-brightness: var(--glass-brightness_light)
   }
-  &.platform-win {
-    background-color: light-dark(var(--main-app-bg_light), var(--main-app-bg_dark));
-  }
+  --glass-opacity: var(--glass-opacity_inactive);
   &.app-focused {
     --glass-opacity: var(--glass-opacity_active);
   }
@@ -54,6 +52,7 @@ div[class*="sidebarList"] {
     border-bottom: none !important;
   }
 }
+
 div[class^="sidebar_"] {
   overflow: visible !important;
   & [class^="panels"] {
