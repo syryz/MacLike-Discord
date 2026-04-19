@@ -4,10 +4,23 @@
 }
 div[class^="bar_"] {
   app-region: no-drag;
-  pointer-events: none;
-}
-div[class^="title_"] {
-  app-region: drag;
+  padding-inline-start: var(--space-12) !important;
+  padding-inline-end: var(--space-12) !important;
+  margin-left: var(--custom-guild-sidebar-width);
+  > div[class^="title_"] {
+    app-region: drag;
+    z-index: 1;
+  }
+  > div[class^="leading_"] {
+    pointer-events: all;
+    app-region: no-drag !important;
+    z-index: 9999999 !important;
+    * {
+      pointer-events: all ;
+      app-region: no-drag !important;
+      z-index: 9999999 !important;
+    }
+  }
 }
 div[class^="header_"] {
   app-region: drag;
@@ -23,7 +36,6 @@ div[class^="subtitleContainer"] {
     height: auto !important;
     padding-top: calc(var(--custom-app-top-bar-height) + var(--space-8));
     background: transparent;
-    /* background: color-mix(in oklab, var(--background-gradient-lower,var(--__header-bar-background)) 100%, transparent); */
     backdrop-filter: blur(var(--glass-blur-strength)) saturate(var(--glass-blur-saturation)) brightness(var(--glass-brightness));
     &::before {
       content: "";
@@ -45,12 +57,17 @@ div[class^="page_"] {
   overflow: hidden;
   height: calc(100% + var(--custom-app-top-bar-height)) !important;
   translate: 0 calc(var(--custom-app-top-bar-height) * -1) !important;
-  div[class^="messagesWrapper"] > div[class^="scroller"] {
-    &::-webkit-scrollbar-track {
+  div[class^="messagesWrapper"] {
+    > div[class^="newMessagesBar_"] {
       margin-top: var(--header-height);
-    }
-    [class^="scrollerInner"] > [class^="container"] {
-      margin-top: var(--header-height);
+    } 
+    > div[class^="scroller"] {
+      &::-webkit-scrollbar-track {
+        margin-top: var(--header-height);
+      }
+      [class^="scrollerInner"] > [class^="container"] {
+        margin-top: var(--header-height);
+      }
     }
   }
   [class^="membersWrap"] {
@@ -84,7 +101,6 @@ div[class^="page_"] {
   }
   div[class^="chatLayerWrapper"] {
     div[class^="container"] {
-        /* padding-top: var(--custom-app-top-bar-height); */
       [aria-label="Thread header"] {
         height: auto !important;
         padding-top: calc(var(--custom-app-top-bar-height) + var(--space-8));
