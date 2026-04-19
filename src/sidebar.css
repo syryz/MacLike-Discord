@@ -30,9 +30,10 @@ div[class^="page_"]::before {
   background: var(--background-base-low);
 }
 div[class*="sidebarList"] {
+  margin-top: calc(var(--custom-app-top-bar-height) * -1);
   border: none !important;
   backdrop-filter: none !important;
-  & div[class^="searchBar"] {
+  div[class^="searchBar"] {
     border-bottom: none !important;
   }
 }
