@@ -1,12 +1,12 @@
 :root {
-  --background-scrim: transparent;
   --settings-header-height: 48px;
 }
 #app-mount:has(div[data-mana-component="layer-modal"]) div[class^="app_"]{
   display: none;
 }
 div[data-mana-component="layer-modal"] {
-  width: 100vw;
+  padding-top: 0 !important;
+  min-width: 100vw;
   height: 100vh;
   background: transparent !important;
   [class^="container_"] {
