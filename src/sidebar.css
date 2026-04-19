@@ -32,22 +32,6 @@ div[class^="page_"]::before {
 div[class*="sidebarList"] {
   border: none !important;
   backdrop-filter: none !important;
-  translate: 0 calc(var(--custom-app-top-bar-height) * -1) !important;
-  max-height: calc(100vh - var(--custom-channel-textarea-text-area-height));
-  > [class^="container"] {
-    padding: 0 !important;
-    background: transparent !important;
-  }
-  > [class^="privateChannels"] {
-    background: transparent !important;
-    > [class^="scroller"] {
-      background: transparent !important;
-    }
-  }
-  & div[class^="scroller"] {
-    margin-bottom: 0 !important;
-    padding-bottom: 0 !important;
-  }
   & div[class^="searchBar"] {
     border-bottom: none !important;
   }
@@ -55,22 +39,8 @@ div[class*="sidebarList"] {
 
 div[class^="sidebar_"] {
   overflow: visible !important;
-  & [class^="panels"] {
-    background: transparent !important;
-    bottom: 0 !important;
-    border: none !important;
-  }
-  & [class^="itemsContainer"] {
-    background: transparent !important;
-  }
-  & > nav {
-    margin-bottom: var(--custom-channel-textarea-text-area-height) !important;
-  }
 }
 div[class*="sidebarResizeHandle"] {
   translate: 0 calc(var(--custom-app-top-bar-height) * -1) !important;
   height: 100vh !important;
-}
-div[class^="app"] > div[class^="bg"] {
-  background: transparent !important;
 }
