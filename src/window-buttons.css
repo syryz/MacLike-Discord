@@ -1,16 +1,7 @@
-div[class*="-bar"] {
-  z-index: 10000;
-  > [class$="-trailing"] {
-    margin-right: 10px;
-  }
-  > [class$="-title"] {
-    translate: calc((var(--custom-guild-sidebar-width) + var(--custom-guild-list-width)) / 3) 0;
-  }
-}
 div[class*="-sidebar"] [class$="itemsContainer"] {
   margin-top: 6px !important;
 }
-div[class*="-winButtons"] {
+div[class^="winButtons_"] {
   --window-button-min_1: url("data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIxNiIgaGVpZ2h0PSIxNiIgeG1sbnM6dj0iaHR0cHM6Ly92ZWN0YS5pby9uYW5vIj4KICA8cmVjdCByeT0iMCIgaGVpZ2h0PSIxNiIgd2lkdGg9IjE2IiBvcGFjaXR5PSIwIiBwYWludC1vcmRlcj0ibWFya2VycyBzdHJva2UgZmlsbCIgLz4KICA8cmVjdCB3aWR0aD0iOCIgaGVpZ2h0PSIyIiB4PSI0IiB5PSI3IiByeT0iMSIgb3BhY2l0eT0iLjUiIC8+Cjwvc3ZnPg==");
   --window-button-max_1: url("data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIxNiIgaGVpZ2h0PSIxNiIgeG1sbnM6dj0iaHR0cHM6Ly92ZWN0YS5pby9uYW5vIj48cmVjdCB3aWR0aD0iMTYiIGhlaWdodD0iMTYiIHJ5PSIwIiBvcGFjaXR5PSIwIiBwYWludC1vcmRlcj0ibWFya2VycyBzdHJva2UgZmlsbCIvPjxwYXRoIGQ9Ik02LjQxNCA1TDExIDkuNTg2VjZjMC0uNDE1LS41ODQtMS0xLTF6TTUgNi40MTRWMTBjMCAuNDE1LjU4NSAxIDEgMWgzLjU4NnoiIG9wYWNpdHk9Ii41Ii8+PC9zdmc+");
   --window-button-restore_1: url("data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIxNiIgaGVpZ2h0PSIxNiIgeG1sbnM6dj0iaHR0cHM6Ly92ZWN0YS5pby9uYW5vIj48cmVjdCB3aWR0aD0iMTYiIGhlaWdodD0iMTYiIHJ5PSIwIiBvcGFjaXR5PSIwIiBwYWludC1vcmRlcj0ibWFya2VycyBzdHJva2UgZmlsbCIvPjxwYXRoIGQ9Ik03Ljk5OSAzLjQwOXYzLjU4NmMwIC40MTYuNTg0IDEgMSAxaDMuNTg2ek04IDEyLjU5VjkuMDA0YzAtLjQxNi0uNTg0LTEtMS0xSDMuNDE0eiIgb3BhY2l0eT0iLjUiLz48L3N2Zz4=");
@@ -34,7 +25,7 @@ div[class*="-winButtons"] {
   }
 }
 
-div[class*="-winButtons"] {
+div[class^="winButtons_"] {
   [aria-label="Minimize"], [aria-label="Maximize"], [aria-label="Restore"], [aria-label="Close"] {
     cursor: default !important;
     padding: 0px !important;
@@ -62,7 +53,7 @@ div[class*="-winButtons"] {
     }
   }
 }
-div[class*="-winButtons"]:hover, html.app-focused div[class*="-winButtons"] {
+div[class^="winButtons_"]:hover, .app-focused div[class^="winButtons_"] {
   [aria-label="Minimize"] {
     background-color: #febc2e !important;
     &:active {
@@ -86,7 +77,7 @@ div[class*="-winButtons"]:hover, html.app-focused div[class*="-winButtons"] {
   }
 }
 
-div[class*="-winButtons"]:hover {
+div[class^="winButtons_"]:hover {
   [aria-label="Close"] {
     background-image: var(--window-button-close_2);
   }
