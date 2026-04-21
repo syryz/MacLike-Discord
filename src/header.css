@@ -2,7 +2,7 @@
   --bg-low: color-mix(in oklab,var(--neutral-82) var(--glass-opacity),var(--custom-theme-base-color,#000) var(--custom-theme-base-color-amount,0%));
   --bg-lower: color-mix(in oklab,var(--neutral-86) var(--glass-opacity),var(--custom-theme-base-color,#000) var(--custom-theme-base-color-amount,0%));
 }
-div[class^="bar_"] {
+div.bar_c38106 {
   app-region: no-drag;
   padding-inline-start: var(--space-12) !important;
   padding-inline-end: var(--space-12) !important;
