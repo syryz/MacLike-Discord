@@ -6,14 +6,14 @@
 */
 
 /* DO NOT TOUCH (unless you know what you are doing) */
-@import url(https://raw.githubusercontent.com/syryz/MacLike-Discord/refs/heads/main/src/sidebar.css);
-@import url(https://raw.githubusercontent.com/syryz/MacLike-Discord/refs/heads/main/src/window-buttons.css);
-@import url(https://raw.githubusercontent.com/syryz/MacLike-Discord/refs/heads/main/src/tweaks.css);
-@import url(https://raw.githubusercontent.com/syryz/MacLike-Discord/refs/heads/main/src/settings.css);
+@import url(https://syryz.github.io/MacLike-Discord/src/sidebar.css);
+@import url(https://syryz.github.io/MacLike-Discord/src/window-buttons.css);
+@import url(https://syryz.github.io/MacLike-Discord/src/tweaks.css);
+@import url(https://syryz.github.io/MacLike-Discord/src/settings.css);
 
 /* All lines below are settings. Remove as you wish. */
 /* Safari-like Header/Address Bar !!EXPERIMENTAL!! */
-@import url(https://raw.githubusercontent.com/syryz/MacLike-Discord/refs/heads/main/src/header.css);
+@import url(https://syryz.github.io/MacLike-Discord/src/header.css);
 /* Apple Emojis */
 @import url(https://mwittrien.github.io/BetterDiscordAddons/Themes/EmojiReplace/base/Apple.css);
 
