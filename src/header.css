@@ -1,3 +1,32 @@
+div[class*="-sidebar"] [class$="itemsContainer"] {
+  margin-top: 6px !important;
+}
+div[class^="winButtons_"] {
+  --window-button-min_1: url("data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIxNiIgaGVpZ2h0PSIxNiIgeG1sbnM6dj0iaHR0cHM6Ly92ZWN0YS5pby9uYW5vIj4KICA8cmVjdCByeT0iMCIgaGVpZ2h0PSIxNiIgd2lkdGg9IjE2IiBvcGFjaXR5PSIwIiBwYWludC1vcmRlcj0ibWFya2VycyBzdHJva2UgZmlsbCIgLz4KICA8cmVjdCB3aWR0aD0iOCIgaGVpZ2h0PSIyIiB4PSI0IiB5PSI3IiByeT0iMSIgb3BhY2l0eT0iLjUiIC8+Cjwvc3ZnPg==");
+  --window-button-max_1: url("data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIxNiIgaGVpZ2h0PSIxNiIgeG1sbnM6dj0iaHR0cHM6Ly92ZWN0YS5pby9uYW5vIj48cmVjdCB3aWR0aD0iMTYiIGhlaWdodD0iMTYiIHJ5PSIwIiBvcGFjaXR5PSIwIiBwYWludC1vcmRlcj0ibWFya2VycyBzdHJva2UgZmlsbCIvPjxwYXRoIGQ9Ik02LjQxNCA1TDExIDkuNTg2VjZjMC0uNDE1LS41ODQtMS0xLTF6TTUgNi40MTRWMTBjMCAuNDE1LjU4NSAxIDEgMWgzLjU4NnoiIG9wYWNpdHk9Ii41Ii8+PC9zdmc+");
+  --window-button-restore_1: url("data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIxNiIgaGVpZ2h0PSIxNiIgeG1sbnM6dj0iaHR0cHM6Ly92ZWN0YS5pby9uYW5vIj48cmVjdCB3aWR0aD0iMTYiIGhlaWdodD0iMTYiIHJ5PSIwIiBvcGFjaXR5PSIwIiBwYWludC1vcmRlcj0ibWFya2VycyBzdHJva2UgZmlsbCIvPjxwYXRoIGQ9Ik03Ljk5OSAzLjQwOXYzLjU4NmMwIC40MTYuNTg0IDEgMSAxaDMuNTg2ek04IDEyLjU5VjkuMDA0YzAtLjQxNi0uNTg0LTEtMS0xSDMuNDE0eiIgb3BhY2l0eT0iLjUiLz48L3N2Zz4=");
+  --window-button-close_1: url("data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIxNiIgaGVpZ2h0PSIxNiIgeG1sbnM6dj0iaHR0cHM6Ly92ZWN0YS5pby9uYW5vIj48cmVjdCByeT0iMCIgaGVpZ2h0PSIxNiIgd2lkdGg9IjE2IiBvcGFjaXR5PSIwIiBwYWludC1vcmRlcj0ibWFya2VycyBzdHJva2UgZmlsbCIvPjxwYXRoIGQ9Ik01LjE3MiA1LjE3MmExIDEgMCAwIDAgMCAxLjQxNEw2LjU4NiA4IDUuMTcyIDkuNDE0YTEgMSAwIDAgMCAxLjQxNCAxLjQxNEw4IDkuNDE0bDEuNDE0IDEuNDE0YTEgMSAwIDAgMCAxLjQxNC0xLjQxNEw5LjQxNCA4bDEuNDE0LTEuNDE0YTEgMSAwIDAgMC0xLjQxNC0xLjQxNEw4IDYuNTg2IDYuNTg2IDUuMTcyYTEgMSAwIDAgMC0xLjQxNCAweiIgb3BhY2l0eT0iLjUiLz48L3N2Zz4=");
+  --window-button-close_2: url(data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMTIiIGhlaWdodD0iMTIiIHZpZXdCb3g9IjAgMCAxMiAxMiIgZmlsbD0ibm9uZSIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj4KPHBhdGggZD0iTTUuMjkyODkgNkwyLjgxODAxIDMuNTI1MTNMMy41MjUxMiAyLjgxODAyTDUuOTk5OTkgNS4yOTI4OUw4LjQ3NDg3IDIuODE4MDJMOS4xODE5NyAzLjUyNTEzTDYuNzA3MSA2TDkuMTgxOTcgOC40NzQ4N0w4LjQ3NDg3IDkuMTgxOThMNS45OTk5OSA2LjcwNzExTDMuNTI1MTIgOS4xODE5OEwyLjgxODAxIDguNDc0ODdMNS4yOTI4OSA2WiIgZmlsbD0iI0EyMDAwOCIvPgo8L3N2Zz4=);
+  --window-button-min_2: url(data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMTMiIGhlaWdodD0iMTMiIGZpbGw9Im5vbmUiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyI+PHBhdGggZD0iTTEwLjgzMyA1Ljg1SDIuMTY3djEuM2g4LjY2N3oiIGZpbGw9IiNCMzcxMUEiLz48L3N2Zz4=);
+  --window-button-max_2: url(data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMTIiIGhlaWdodD0iMTIiIHZpZXdCb3g9IjAgMCAxMiAxMiIgZmlsbD0ibm9uZSIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj4KPHBhdGggZD0iTTcuMzkyOTMgMy4wMDg5M0wzLjAwODg3IDcuMzkyOTlMMi44MTc5NSAyLjgxODAxTDcuMzkyOTMgMy4wMDg5M1oiIGZpbGw9IiMwMjZBMTUiLz4KPHBhdGggZD0iTTQuNjA2OTUgOC45OTEwMUw4Ljk5MTAxIDQuNjA2OTVMOS4xODE5MyA5LjE4MTkzTDQuNjA2OTUgOC45OTEwMVogIiBmaWxsPSIjMDI2QTE1Ii8+Cjwvc3ZnPg==);
+
+  app-region: no-drag;
+  z-index: 10000 !important;
+  order: -1 !important;
+  position: fixed !important;
+  left: 10px;
+  top: 12px;
+  cursor: default !important;
+  &::before {
+    display: none !important;
+  }
+  &:hover > ::after {
+    opacity: 1 !important;
+  }
+}
+
+
+
 :root {
   --bg-low: color-mix(in oklab,var(--neutral-82) var(--glass-opacity),var(--custom-theme-base-color,#000) var(--custom-theme-base-color-amount,0%));
   --bg-lower: color-mix(in oklab,var(--neutral-86) var(--glass-opacity),var(--custom-theme-base-color,#000) var(--custom-theme-base-color-amount,0%));
@@ -32,7 +61,7 @@ div[class^="header_"] {
 div[class^="subtitleContainer"] {
   position: absolute !important;
   width: 100% !important;
-  > [aria-label="Channel header"] {
+  > [aria-label="Channel header"], > section[class^="headerBar_"] {
     height: auto !important;
     padding-top: calc(var(--custom-app-top-bar-height) + var(--space-8));
     background: transparent;
@@ -101,7 +130,7 @@ div[class^="page_"] {
   }
   div[class^="chatLayerWrapper"] {
     div[class^="container"] {
-      [aria-label="Thread header"] {
+      [aria-label="Thread header"], [aria-label="Channel header"] {
         height: auto !important;
         padding-top: calc(var(--custom-app-top-bar-height) + var(--space-8));
         background: transparent;
