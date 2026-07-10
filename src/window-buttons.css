@@ -15,7 +15,7 @@ div[class^="winButtons_"] {
   order: -1 !important;
   position: fixed !important;
   left: 10px;
-  top: 14px;
+  top: 12px;
   cursor: default !important;
   &::before {
     display: none !important;
@@ -26,7 +26,7 @@ div[class^="winButtons_"] {
 }
 
 div[class^="winButtons_"] {
-  [aria-label="Minimize"], [aria-label="Maximize"], [aria-label="Restore"], [aria-label="Close"] {
+  [aria-label="Minimize"], [aria-label="Minimise"], [aria-label="Maximize"], [aria-label="Maximise"], [aria-label="Restore"], [aria-label="Close"] {
     cursor: default !important;
     padding: 0px !important;
     height: var(--window-button-size) !important;
@@ -54,14 +54,14 @@ div[class^="winButtons_"] {
   }
 }
 div[class^="winButtons_"]:hover, .app-focused div[class^="winButtons_"] {
-  [aria-label="Minimize"] {
+  [aria-label="Minimize"], [aria-label="Minimise"] {
     background-color: #febc2e !important;
     &:active {
       background-color: #b19021 !important;
     }
   }
 
-  [aria-label="Maximize"], [aria-label="Restore"] {
+  [aria-label="Maximize"], [aria-label="Maximise"], [aria-label="Restore"] {
     background-color: #28c840 !important;
     &:active {
       background-color: #2d903e !important;
@@ -81,10 +81,10 @@ div[class^="winButtons_"]:hover {
   [aria-label="Close"] {
     background-image: var(--window-button-close_2);
   }
-  [aria-label="Minimize"] {
+  [aria-label="Minimize"], [aria-label="Minimise"] {
     background-image: var(--window-button-min_2);
   }
-  [aria-label="Maximize"] {
+  [aria-label="Maximize"], [aria-label="Maximise"] {
     background-image: var(--window-button-max_2);
   }
   [aria-label="Restore"] {
