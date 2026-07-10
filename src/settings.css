@@ -1,33 +1,33 @@
 :root {
   --settings-header-height: 48px;
 }
-#app-mount:has(div[data-mana-component="layer-modal"]) {
-  div[class^="app_"], div[class*="systemBar_"] {
+/* div[data-mana-component="layer-modal"] */
+#app-mount:has(> [class^="bar_"][class*="show_"]) {
+  div[class^="app__"] {
     display: none;
   }
-}
-div[data-mana-component="layer-modal"] {
-  padding-top: 0 !important;
-  min-width: 100vw;
-  height: 100vh;
-  background: transparent !important;
-  [class^="container_"] {
-    app-region: drag;
-    > * {
-      app-region: no-drag;
-    }
-    > [class^="sidebar_"] {
-      margin-top: var(--custom-app-top-bar-height);
-    }
-    div[class^="contentHeader_"] {
-      app-region: drag;
-      > [data-mana-component="button"] {
-        app-region: no-drag;
+  > [class^="bar_"] {
+    max-width: min(100px, 80vw);
+  }
+  div[data-mana-component="layer-modal"] {
+    padding-top: 0 !important;
+    min-width: 100vw;
+    height: 100vh;
+    background: transparent !important;
+    [class^="container_"] {
+      > [class^="sidebar_"] {
+        margin-top: var(--custom-app-top-bar-height);
+      }
+      div[class^="contentHeader_"] {
+        app-region: drag;
+        > [data-mana-component="button"] {
+          app-region: no-drag !important;
+        }
       }
     }
-  }
-  
-  .fixedContent__409aa:after {
-    display: none;
+    
+    .fixedContent__409aa:after {
+      display: none;
+    }
   }
 }
