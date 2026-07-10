@@ -41,6 +41,7 @@ A Discord client mod is required. BetterDiscord or Vencord is recommended.
 - Turn off the window border if unwanted.
 ### Enable Translucency/Fix Rounded Corners
 Windows
+Recommended Method (requires external software):
 1. Install [MicaForEveryone](https://github.com/MicaForEveryone/MicaForEveryone).
 2. Add new rule > Add process rule.
 3. Enter `Discord`.
@@ -49,6 +50,11 @@ Windows
 6. Go to Discord settings.
 7. In the BetterDiscord or Vencord settings page, check `Enable window transparency.`
 8. Fully restart Discord.
+Alternative Method (could break window borders):
+1. Go to Discord settings.
+2. In the BetterDiscord or Vencord settings page, make sure `Enable window transparency` if OFF
+3. Under `Background Material`, select your preferred style (Acrylic is closest to MacOS vibrancy)
+4. Fully restart Discord.
 
 MacOS
 1. Go to Discord settings > BetterDiscord/Vencord Settings.
@@ -68,7 +74,9 @@ MacOS
 - Switching between light and dark themes removes transparency. This is an issue with Discord/Vencord's implementation, so it cannot be fixed on my end.
 
 ### Credits
-- Huge thanks to [hxntxihero](https://github.com/hxntxihero) for Windows compatibility.
+- Huge thanks to
+  - [hxntxihero](https://github.com/hxntxihero) for Windows compatibility
+  - crusty for testing on Windows
 - Part of the WAM project
 
 Created by *syrys*
