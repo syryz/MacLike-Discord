@@ -1,6 +1,6 @@
 /**
  * @name MacLike
- * @version 1.2.3
+ * @version 1.2.5
  * @description A theme borrowing MacOS design language. Part of the WAM project.
  * @author syrys
 */
@@ -22,7 +22,6 @@
   --main-app-bg_light: rgba(36, 36, 36, 0.8);
   --main-app-bg_dark: rgba(36, 36, 36, 0.8);
 
-  --window-button-style: 2; /* Recommended: 2 */
   --window-button-size: 13px; /* Mac Default: 13px */
 
   --enable-window-border: 1; /* Disable: 0 */
