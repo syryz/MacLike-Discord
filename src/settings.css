@@ -1,13 +1,13 @@
 :root {
   --settings-header-height: 48px;
 }
-/* div[data-mana-component="layer-modal"] */
-#app-mount:has(> [class^="bar_"][class*="show_"]) {
+
+#app-mount > [class^="bar_"][class*="show_"] {
+  max-width: min(100px, 80vw);
+}
+#app-mount > [class^="bar_"][class*="show_"] ~ [class^="appAsidePanelWrapper_"] {
   div[class^="app__"] {
-    display: none;
-  }
-  > [class^="bar_"] {
-    max-width: min(100px, 80vw);
+    visibility: hidden;
   }
   div[data-mana-component="layer-modal"] {
     padding-top: 0 !important;
