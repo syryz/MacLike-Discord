@@ -1,15 +1,16 @@
 /**
  * @name MacLike
- * @version 1.2.5
+ * @version 1.0.0
  * @description A theme borrowing MacOS design language. Part of the WAM project.
  * @author syrys
 */
 
 /* DO NOT TOUCH (unless you know what you are doing) */
 @import url(https://syryz.github.io/MacLike-Discord/src/sidebar.css);
-@import url(https://syryz.github.io/MacLike-Discord/src/window-buttons.css);
+/* @import url(https://syryz.github.io/MacLike-Discord/src/window-buttons.css); */
+@import url(https://discord-extensions.github.io/macos-titlebar/src/source.css);
 @import url(https://syryz.github.io/MacLike-Discord/src/tweaks.css);
-@import url(https://syryz.github.io/MacLike-Discord/src/settings.css);
+/* @import url(https://syryz.github.io/MacLike-Discord/src/settings.css); */
 
 /* All lines below are settings. Remove as you wish. */
 /* Safari-like Header/Address Bar !!EXPERIMENTAL!! */
@@ -22,9 +23,10 @@
   --main-app-bg_light: rgba(36, 36, 36, 0.8);
   --main-app-bg_dark: rgba(36, 36, 36, 0.8);
 
+  --window-button-style: 2; /* Recommended: 2 */
   --window-button-size: 13px; /* Mac Default: 13px */
 
-  --enable-window-border: 1; /* Disable: 0 */
+  --enable-window-border: 0; /* Disable: 0 */
 
   --glass-opacity_active: 80%; /* Mac Default: 80% */
   --glass-opacity_inactive: 100%; /* Mac Default: 100% */
@@ -32,4 +34,43 @@
   --glass-brightness_light: 110%; /* Mac Default: 100% */
   --glass-blur-strength: 33px; /* Mac Default: 33px */
   --glass-blur-saturation: 150%; /* Mac Default: 150% */
+}
+
+
+:root {
+  --settings-header-height: 48px;
+}
+
+#app-mount > [class^="bar_"][class*="show_"] {
+  max-width: min(100px, 80vw);
+}
+/* #app-mount > [class^="bar_"][class*="show_"] ~ [class^="appAsidePanelWrapper_"] { */
+body > div[data-live-announcer] ~ #app-mount div[class^="app__"] {
+  visibility: visible;
+}
+#app-mount { 
+  div[class^="app__"] {
+    visibility: hidden;
+  }
+  div[data-mana-component="layer-modal"] {
+    padding-top: 0 !important;
+    min-width: 100vw;
+    height: 100vh;
+    background: transparent !important;
+    [class^="container_"] {
+      > [class^="sidebar_"] {
+        margin-top: var(--custom-app-top-bar-height);
+      }
+      div[class^="contentHeader_"] {
+        app-region: drag;
+        > [data-mana-component="button"] {
+          app-region: no-drag !important;
+        }
+      }
+    }
+    
+    .fixedContent__409aa:after {
+      display: none;
+    }
+  }
 }
