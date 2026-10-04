@@ -9,7 +9,7 @@
 @import url(https://syryz.github.io/MacLike-Discord/src/sidebar.css);
 @import url(https://syryz.github.io/MacLike-Discord/src/window-buttons.css);
 @import url(https://syryz.github.io/MacLike-Discord/src/tweaks.css);
-@import url(https://syryz.github.io/MacLike-Discord/src/settings.css);
+/* @import url(https://syryz.github.io/MacLike-Discord/src/settings.css); Currently not working due to Discord's changes */
 
 /* All lines below are settings. Remove as you wish. */
 /* Safari-like Header/Address Bar !!EXPERIMENTAL!! */
